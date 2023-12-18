@@ -1,62 +1,57 @@
-class Pessoa:
-    def __init__(self, nome, idade, cpf, ender, npai, nmae):
+class Cadastro:
+    def __init__(self, nome, nasc, cpf, ender, npai, nmae):
         self.nome = nome
-        self.idade = idade
+        self.nasc = nasc
         self.cpf = cpf
         self.ender = ender
         self.npai = npai
         self.nmae = nmae
-    def olhanome(self):
+    def obternome(self):
         return self.nome
-    def alterarnome(self, novonome):
-        self.nome = novonome
-    def olhaidade(self):
-        return self.idade
-    def alteraridade(self, novaidade):
-        if(novaidade >= 0):
-            self.idade = int(novaidade)
-        else:
-            print('Digite esse numero direito poha')
-    def olhacpf(self):
+    def trocanome(self, mudarnome):
+        self.nome = mudarnome
+    def obternasc(self):
+        return self.nasc
+    def trocanasc(self, mudarnasc):
+        self.nasc = mudarnasc
+    def obtercpf(self):
         return self.cpf
-    def alterarcpf(self, novocpf):
-        if(novocpf >= 0):
-            self.cpf = int(novocpf)
-        else:
-            print('Digite esse cpf direito krl')
-    def olhaender(self):
+    def trocacpf(self,mudarcpf):
+        self.cpf = mudarcpf
+    def obterender(self):
         return self.ender
-    def alterarender(self, novoender):
-        self.ender = novoender
-    def olhanpai(self):
+    def trocaender(self, mudarender):
+        self.ender = mudarender
+    def obternpai(self):
         return self.npai
-    def alterarnpai(self,novonpai):
-        self.npai = novonpai
-    def olhanmae(self):
+    def trocanpai(self, mudarnpai):
+        self.npai = mudarnpai
+    def obternmae(self):
         return self.nmae
-    def alterarnmae(self, novanmae):
-        self.nmae = novanmae
+    def trocanmae(self, mudarnmae):
+        self.nmae = mudarnmae
     
-pcad = Pessoa('Goku', 90, 40028922, 'Planeta vegeta', 'Bardock', 'Gine')
+cad = Cadastro(input('Digite seu nome: '), input('Digite sua data de nascimento: '), input('Digite seu cpf: '), input('Digite seu endereço: '), input('Digite nome de seu pai ou responsavel: '), input('Digite nome de sua mãe ou responsavel: '))
 
-print('NOME: ', pcad.olhanome())
-print('IDADE: ', pcad.olhaidade())
-print('CPF: ', pcad.olhacpf())
-print('ENDEREÇO: ', pcad.olhaender())
-print('NOME DO PAI: ', pcad.olhanpai())
-print('NOME DA MÃE: ', pcad.olhanmae())
-
-pcad.alterarnome('Clebis Azeite')
-pcad.alteraridade(32)
-pcad.alterarcpf(90029309155)
-pcad.alterarender('Rua bosta')
-pcad.alterarnpai('Inexistente')
-pcad.alterarnmae('Ivete Sangalo')
+print('Nome: ', cad.obternome())
+print('Data de nascimento: ', cad.obternasc())
+print('CPF: ', cad.obtercpf())
+print('Endereço: ', cad.obterender())
+print('Nome do pai: ', cad.obternpai())
+print('Nome da mãe: ', cad.obternmae())
 print('\n')
 
-print('NOME: ', pcad.olhanome())
-print('IDADE: ', pcad.olhaidade())
-print('CPF: ', pcad.olhacpf())
-print('ENDEREÇO: ', pcad.olhaender())
-print('NOME DO PAI: ', pcad.olhanpai())
-print('NOME DA MÃE:', pcad.olhanmae())
+cad.trocanome(input('Novo/troca nome: '))
+cad.trocanasc(input('Nova/troca data de nascimento: '))
+cad.trocacpf(input('Troca cpf: '))
+cad.trocaender(input('Novo/troca seu endereço: '))
+cad.trocanpai(input('Novo/Troca nome do pai: '))
+cad.trocanmae(input('Novo/Troca nome da mãe: '))
+print('\n')
+
+print('Nome: ', cad.obternome())
+print('Data de nascimento: ', cad.obternasc())
+print('CPF: ', cad.obtercpf())
+print('Endereço: ', cad.obterender())
+print('Nome do pai: ', cad.obternpai())
+print('Nome da mãe: ', cad.obternmae())
