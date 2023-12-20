@@ -1,16 +1,27 @@
 import random
 
-print('--- SORTEIO Aleatorio ---')
+print('--- SORTEIO ALEATORIO \n')
 
-print('\n')
+lista = ['moto', 'carro', 'geladeira', 'boneco'] # itens a serem sorteados
+
 while True:
-    sort = input('Digite o seu nome : ') #nome do sorteado
 
-    lista = ('Carro', 'Bicicleta', 'celular', 'pneus velhos') #itens a serem sorteados 
+    sorteado = input('Digite seu nome: ') #nome do sorteado
+    print('')
 
-    
+    if (not lista): # verificar se a lista estar vazia antes de sortear
+        print('A lista estar vazia sorteio acabado =D \n')
+        break
+
+    print(f'Lista atual --->{lista}<---')
+
     lis = random.choice(lista)
     print('')
-    print(f'O {sort} sorteou o {lis}')
-    print('\n')
-    print('----------------------------')
+    print(f'========== O {sorteado} sorteou o {lis} ==========\n')
+
+    lista.remove(lis)
+
+    print(f'Lista apos o sorteio ===>{lista}<=== \n\n')
+
+    print('-------------------------------------------------- ')
+    print('-------------------------------------------------- \n\n')
