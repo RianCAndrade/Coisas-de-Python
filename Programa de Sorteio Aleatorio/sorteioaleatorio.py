@@ -13,7 +13,7 @@ while True:
         print('A lista estar vazia sorteio acabado =D \n')
         break
 
-    print(f'Lista atual --->{lista}<---')
+    print(f'LISTA ATUAL --->{lista}<---')
 
     lis = random.choice(lista)
     print('')
@@ -21,7 +21,7 @@ while True:
 
     lista.remove(lis)
 
-    print(f'Lista apos o sorteio ===>{lista}<=== \n\n')
+    print(f'LISTA APOS O SORTEIO ===>{lista}<=== \n\n')
 
     print('-------------------------------------------------- ')
     print('-------------------------------------------------- \n\n')
