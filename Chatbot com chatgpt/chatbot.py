@@ -1,6 +1,6 @@
 import openai
 
-my_api = "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" #tua chave API do chatgpt
+my_api = "sk-52meKVw6nAsaOylHTgSdT3BlbkFJFpWqvJj" #tua chave API do chatgpt
 
 openai.api_key = my_api
 
